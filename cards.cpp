@@ -1,4 +1,4 @@
-//cards.cpp
-//Authors: Your name and your partner's name
-//Implementation of the classes defined in cards.h
+// cards.cpp
+// Author: Your name
+// Implementation of the classes defined in cards.h
 
