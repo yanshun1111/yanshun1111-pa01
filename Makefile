@@ -1,15 +1,23 @@
 #Makefile
-CXXFLAGS = -std=c++11 -g -Wall -O0
+CXXFLAGS = -std=c++11 -g
 
 all: main test
 
-game: cards.cpp main.cpp
-	g++ $(CXXFLAGS) cards.cpp main.cpp -o game
-	./game
+game: cards.o main.o
+	g++ $(CXXFLAGS) cards.o main.o -o game
 
-tests: cards.cpp test.cpp
-	g++ $(CXXFLAGS) cards.cpp tests.cpp -o test
+tests: cards.o test.o
+	g++ $(CXXFLAGS) cards.o tests.o -o test
 	./tests
 
+main.o: main.cpp
+	g++ $(CXXFLAGS) main.cpp -c
+
+tests.o: tests.cpp
+	g++ $(CXXFLAGS) tests.cpp -c
+
+cards.o: cards.cpp cards.h
+	g++ $(CXXFLAGS) cards.cpp -c
+
 clean:
-	rm game tests
+	rm game tests *.o
