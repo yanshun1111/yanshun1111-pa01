@@ -42,6 +42,8 @@ int main(int argv, char** argc){
 
 Card check('\0',"");
 
+cout << "Starting the game" << endl;
+
 while (!(Alice.getRoot() == check) || !(Bob.getRoot() == check)){
 
   Card t = Alice.getMin();
