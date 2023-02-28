@@ -82,6 +82,5 @@ cout << "Bob's cards:" << endl;
 
 Bob.printInOrder();
 
-cout << endl;
 return 0;
 }
