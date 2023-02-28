@@ -1,8 +1,6 @@
 #Makefile
 CXXFLAGS = -std=c++11 -g
 
-all: main test
-
 game: cards.o main.o
 	g++ $(CXXFLAGS) cards.o main.o -o game
 
